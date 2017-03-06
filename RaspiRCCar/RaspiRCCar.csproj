@@ -14,7 +14,7 @@
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
+    <PlatformTarget>x86</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -33,6 +33,66 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Media, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\net7mma.0.111192.1\lib\net452\Media.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Media.Codec, Version=1.0.7.41643, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\net7mma.0.111192.1\lib\net452\Media.Codec.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Media.Codecs.Image, Version=1.0.7.41646, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\net7mma.0.111192.1\lib\net452\Media.Codecs.Image.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Media.Codecs.Video.H264, Version=1.0.7.41646, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\net7mma.0.111192.1\lib\net452\Media.Codecs.Video.H264.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Media.Common, Version=1.0.7.41642, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\net7mma.0.111192.1\lib\net452\Media.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Media.Compression, Version=1.0.7.41643, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\net7mma.0.111192.1\lib\net452\Media.Compression.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Media.Container, Version=1.0.7.41643, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\net7mma.0.111192.1\lib\net452\Media.Container.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Media.Containers.Mpeg, Version=1.0.7.41645, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\net7mma.0.111192.1\lib\net452\Media.Containers.Mpeg.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Media.Ntp, Version=1.0.7.41643, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\net7mma.0.111192.1\lib\net452\Media.Ntp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Media.Rtmp, Version=1.0.7.41644, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\net7mma.0.111192.1\lib\net452\Media.Rtmp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Media.Rtp, Version=1.0.7.41643, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\net7mma.0.111192.1\lib\net452\Media.Rtp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Media.RtpTools, Version=1.0.7.41644, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\net7mma.0.111192.1\lib\net452\Media.RtpTools.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Media.Rtsp, Version=1.0.7.41644, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\net7mma.0.111192.1\lib\net452\Media.Rtsp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Media.RtspServer, Version=1.0.7.41647, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\net7mma.0.111192.1\lib\net452\Media.RtspServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Media.Sdp, Version=1.0.7.41643, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\net7mma.0.111192.1\lib\net452\Media.Sdp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -46,14 +106,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="ExtensionMethods.cs" />
+    <Compile Include="FLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="FLogin.Designer.cs">
+      <DependentUpon>FLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FMain.Designer.cs">
+      <DependentUpon>FMain.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FLogin.resx">
+      <DependentUpon>FLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FMain.resx">
+      <DependentUpon>FMain.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -62,7 +135,9 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -75,6 +150,46 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\raspberry-pi-logo.png" />
+    <None Include="Resources\Deviantart-please-stand-by-by-gxmew.jpg" />
+    <Content Include="XInputInterface.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LibVlcWrapper\nVLC.LibVlcWrapper.csproj">
+      <Project>{57f08087-b175-4c96-be36-83fbc4a21065}</Project>
+      <Name>nVLC.LibVlcWrapper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\XInputDotNetPure\XInputDotNetPure.csproj">
+      <Project>{952700cd-a384-43a4-ac4b-52256f83836e}</Project>
+      <Name>XInputDotNetPure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\XInputInterface\XInputInterface.vcxproj">
+      <Project>{1967d61a-fb64-463c-bb3c-bb6e90fbc76f}</Project>
+      <Name>XInputInterface</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -1,0 +1,6 @@
+[submodule "XInputDotNet"]
+	path = XInputDotNet
+	url = https://github.com/speps/XInputDotNet.git
+[submodule "nVLC"]
+	path = nVLC
+	url = https://github.com/ericnewton76/nVLC.git
